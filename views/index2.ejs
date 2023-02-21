@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./templates/header')%>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Ejemplo de EJS</h1>
+            </div>
+            <div class="card-body">
+                <%if(dishes.size > 0){%>
+                    Hay <%=dishes.size%> Platos 
+            
+                    <table class="table table-dark table-striped-columns">
+                        <thead>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Calorias</th>
+                            <th>Vegetariano</th>
+                            <th>Valor</th>
+                        </thead>
+                        <tbody>
+                            <%dishes.forEach(dish =>{%>
+                                <tr>
+                                    <td><%=dish.id%></td>
+                                    <td><%=dish.name%></td>
+                                    <td><%=dish.calories%></td>
+                                    <td><%=dish.isVegetarian%></td>
+                                    <td><%=dish.value%></td>
+                                </tr>                        
+                                <%})%>
+                        </tbody>
+                    </table>
+                <%}else{%>
+                    No hay Platos
+                <%}%>
+                <a href="newdish" class="btn btn-secondary">Agregar Plato</a>
+            </div>
+        </div>
+    </div>
+    <%-include('./templates/footer')%>
+</body>
+</html>

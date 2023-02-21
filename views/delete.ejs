@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./templates/header')%>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h1>Eliminar usuario</h1>
+            </div>
+            <div class="card-body">
+                <span>Ingrese el correo electronico del usuario que desea eliminar</span>
+                <br>
+                <br>
+                <form action="/delete" method="post">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="correo" class="form-label">Correo Electronico</label> &nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp&nbsp
+                            <input type="email" class="form-control" name="correo" id="correo" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <button type="submit" class="btn btn-primary">Enviar Datos</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <%-include('./templates/footer')%>
+</body>
+</html>

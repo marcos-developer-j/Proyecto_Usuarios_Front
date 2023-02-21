@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('./templates/header')%>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3
+                col-12">
+                <h2 class="text-center">Bienvenido</h2>
+                <img class="img-fluid mx-auto d-block rounded"
+                    src="https://picsum.photos/id/870/300/200" />
+                <form action="/auth" method="post">
+                    <div class="form-group">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input id="correo" name="correo"
+                            class="form-control" type="email"
+                            placeholder="Correo electrónico" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="palabraSecreta" class="form-label">Contraseña</label>
+                        <input id="palabraSecreta" name="contraseña"
+                            class="form-control" type="password"
+                            placeholder="Contraseña" required>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary mb-2">
+                            Entrar
+                        </button>
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%-include('./templates/footer')%>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('./templates/header')%>
+  </head>
+  <body>
+    <div class="align-self-right">
+        <span><a href="logout">Salir</a></span>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1>Lista de usuarios</h1>
+        </div>
+        <div class="card-body">
+          <%if(data.length > 0){%> Hay <%=data.length%> Usuarios
+          <table class="table table-dark table-striped-columns">
+            <thead>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Rol</th>
+              <th>Correo</th>
+              <th>Fecha de nacimiento</th>
+            </thead>
+            <tbody>
+              <%data.forEach(data =>{%>
+              <tr>
+                <td><%=data.id%></td>
+                <td><%=data.data.nombre%></td>
+                <td><%=data.data.apellido%></td>
+                <td><%=data.data.rol%></td>
+                <td><%=data.data.correo%></td>
+                <td><%=data.data.fecha_nacimiento%></td>
+              </tr>
+              <%})%>
+            </tbody>
+          </table>
+          <%}else{%> No hay Platos <%}%> <% if(session=="Administrador"){%>
+          <a href="register" class="btn btn-secondary">Agregar Usuario</a> &nbsp
+          &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp
+          &nbsp &nbsp &nbsp
+          <a href="delete" class="btn btn-secondary">Eliminar Usuario</a>
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <%-include('./templates/footer')%>
+  </body>
+</html>

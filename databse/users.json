@@ -1,0 +1,13 @@
+[
+  {
+    "id": 264011,
+    "data": {
+      "nombre": "Marcos",
+      "apellido": "Vargas",
+      "correo": "admin@admin.com",
+      "fecha_nacimiento": "2023-02-20",
+      "rol": "Administrador",
+      "contraseña": "1234"
+    }
+  }
+]
